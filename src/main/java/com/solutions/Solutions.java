@@ -1,17 +1,18 @@
 package com.solutions;
 
-public class SolutionsInterfaceImpl implements SolutionsInterface {
+public class Solutions {
 
-    /* I use "<>", to show, that param in brackets is given */
-    @Override
-    public String Solution(int number, int amountOfTerms) {
-        /* The lowest odd number is 1, then goes 3, 5, 7 e.t.c.;
+    /* I use "<>", to indicate, that param in brackets is given */
+
+    public static String solution(int number, int amountOfTerms) {
+        /* The lowest odd number is 1, then goes 3, 5, 7 e.t.c.,
          * so, the least sum of <amountOfTerms> different odd integers is:
          *   1 + 3 + 5 + ... + (2 * <amountOfTerms> - 1) = (<amountOfTerms>)^2,
          * thus, <number> can't be less then (<amountOfTerms>)^2 */
         if (number < amountOfTerms * amountOfTerms) {
             return "NO";
         }
+
         /* If we have odd number of odd terms summing up, we can't get an even number */
         if ((number % 2 == 0) && (amountOfTerms % 2 != 0)) {
             return "NO";
@@ -20,6 +21,7 @@ public class SolutionsInterfaceImpl implements SolutionsInterface {
         if ((number % 2 != 0) && (amountOfTerms % 2 == 0)) {
             return "NO";
         }
+
         /*  Else, we got:
          * 1.<number> >= (<amountOfTerms>)^2, and:
          * 2.<number> and <amountOfNumbers> have the same parity;
