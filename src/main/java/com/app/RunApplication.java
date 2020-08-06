@@ -10,11 +10,16 @@ import static com.solutions.Solutions.solution;
 
 public class RunApplication {
 
+    /**
+     * @author majorMobilych, https://github.com/majorMobilych;
+     * @see com.solutions.Solutions, public static String solution(int number, int amountOfTerms);
+     */
     public static void main(String[] args) {
         try {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
             System.out.println("Please, enter number of test:");
+            /* Integer.parseInt(String s) throws NumberFormatException - if input String isn't a number */
             int numberOfTests = Integer.parseInt(bufferedReader.readLine());
 
             List<String> listOfAnswers = new ArrayList<>();
@@ -22,8 +27,14 @@ public class RunApplication {
                 System.out.println("Please, enter data for test " + i + ":");
                 String currentTest = bufferedReader.readLine();
 
-                listOfAnswers.add(solution(Integer.parseInt(currentTest.substring(0, currentTest.indexOf(" "))),
-                        Integer.parseInt(currentTest.substring(currentTest.indexOf(" ") + 1))));
+                /* 'n' stands for 'number' solution(int number, int amountOfTerms), Solutions.class,
+                 * Integer.parseInt(String s) throws NumberFormatException - if input String isn't a number */
+                int n = Integer.parseInt(currentTest.substring(0, currentTest.indexOf(" ")));
+                /* 'k' stands for 'amountOfTerms' in solution(int number, int amountOfTerms), Solutions.class,
+                 * Integer.parseInt(String s) throws NumberFormatException - if input String isn't a number */
+                int k = Integer.parseInt(currentTest.substring(currentTest.indexOf(" ") + 1));
+
+                listOfAnswers.add(solution(n, k));
             }
             listOfAnswers.forEach(System.out::println);
         } catch (NumberFormatException | IOException exception) {
