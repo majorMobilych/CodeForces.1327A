@@ -1,6 +1,13 @@
 package com.solutions;
 
-public class Solutions {
+/**
+ * @author majorMobilych, https://github.com/majorMobilych;
+ */
+public final class Solutions {
+
+    private Solutions() {
+        throw new AssertionError("Non-instantiating class");
+    }
 
     /* I use "<>", to indicate, that param in brackets is given */
 
