@@ -9,4 +9,4 @@ Secondly, if ```n``` and ```k``` have different parity, also return ```NO``` bea
 <br/>
 If we haven't returned ```NO``` before, we return ```YES```.
 <br/>
-Explanation: consider sum 1 + 3 + 5 + (2 ```k``` - 1 + ```n``` - ```k * k```) = ```k * k``` + ```n``` - ```k * k``` = ```n``` - term (2 ```k``` - 1 + ```n``` - ```k * k```) is odd add greater than (2 ```k``` - 1)
+Explanation: consider sum 1 + 3 + 5 + (2 ```k``` - 1 + ```n``` - ```k * k```) = ```k * k``` + ```n``` - ```k * k``` = ```n``` - term (2 ```k``` - 1 + ```n``` - ```k * k```) is odd, hense 2 ```k``` - 1 is odd, ```n``` - ```k * k``` is even, odd + even = even, also last term is greater than (2 ```k``` - 1), so it is different from 1, 3, 5 and so on.
