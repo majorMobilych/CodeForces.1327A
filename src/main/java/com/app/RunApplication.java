@@ -20,10 +20,10 @@ public class RunApplication {
 
             System.out.println("Please, enter number of test:");
             /* Integer.parseInt(String s) throws NumberFormatException - if input String isn't a number */
-            int numberOfTests = Integer.parseInt(bufferedReader.readLine());
+            int t = Integer.parseInt(bufferedReader.readLine());
 
             List<String> listOfAnswers = new ArrayList<>();
-            for (int i = 0; i < numberOfTests; i++) {
+            for (int i = 0; i < t; i++) {
                 System.out.println("Please, enter data for test " + i + ":");
                 String currentTest = bufferedReader.readLine();
 
@@ -38,7 +38,7 @@ public class RunApplication {
             }
             listOfAnswers.forEach(System.out::println);
         } catch (NumberFormatException | IOException exception) {
-            System.out.print("Rerun the app. Please input a number of tests.");
+            System.out.print("Rerun the app. Please input data correctly.");
             exception.printStackTrace();
         }
     }
