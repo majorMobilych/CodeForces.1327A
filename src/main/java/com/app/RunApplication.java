@@ -8,12 +8,12 @@ import java.util.List;
 
 import static com.solutions.Solutions.solution;
 
+/**
+ * @author majorMobilych, https://github.com/majorMobilych;
+ * @see com.solutions.Solutions, public static String solution(int number, int amountOfTerms);
+ */
 public class RunApplication {
 
-    /**
-     * @author majorMobilych, https://github.com/majorMobilych;
-     * @see com.solutions.Solutions, public static String solution(int number, int amountOfTerms);
-     */
     public static void main(String[] args) {
         try {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));

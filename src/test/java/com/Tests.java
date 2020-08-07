@@ -5,6 +5,10 @@ import org.junit.Test;
 
 import static com.solutions.Solutions.solution;
 
+/**
+ * @author majorMobilych, https://github.com/majorMobilych;
+ * @see com.solutions.Solutions, public static String solution(int number, int amountOfTerms);
+ */
 public class Tests {
 
     @Test
